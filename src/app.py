@@ -26,8 +26,8 @@ def index():
         x = index % 3
         y = (index - x) / 3
         dict = {
-            "left": f"{ 50 * x + 100 }px",
-            "top": f"{ 50 * y + 100}px",
+            "left": f"{ 50 * x + 150 }px",
+            "top": f"{ 50 * y + 20}px",
             "symbol": game.board[index],
             "id": index,
         }
