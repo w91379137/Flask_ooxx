@@ -1,8 +1,18 @@
 
+space = "　"
+x = "Ｘ"
+o = "Ｏ"
+
 class OOXXGame():
 
-    name = 'kk'
+    board = []
 
     def __init__(self):
-        pass
-
+        self.createBoard()
+    
+    def createBoard(self):
+        new_board = []
+        for i in range(9):
+            new_board.append(space)
+        self.board = new_board
+        print(self.board)

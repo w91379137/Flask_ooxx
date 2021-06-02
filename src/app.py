@@ -11,8 +11,7 @@ game = OOXXGame() # 建立一個 game
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     global game
-    print(game.name)
-    return render_template('index.html')
+    return render_template('index.html', board = game.board)
 
 if __name__ == "__main__":
     app.run(debug=True)
