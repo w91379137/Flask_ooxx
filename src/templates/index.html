@@ -1,3 +1,8 @@
+<!-- https://stackoverflow.com/questions/14711552/external-javascript-file-is-not-getting-added-when-running-on-flask -->
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'noformalert.js') }}"
+></script>
 
 <form method="POST">
     回合：{{game.turn}}
