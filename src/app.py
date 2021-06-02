@@ -12,6 +12,9 @@ game = OOXXGame() # 建立一個 game
 def index():
     global game
 
+    value = request.form.get('button')
+    print(value)
+
     button_dict_list = []
     count = len(game.board)
     for index in range(count):
@@ -21,6 +24,7 @@ def index():
             "left": f"{ 50 * x + 100 }px",
             "top": f"{ 50 * y + 100}px",
             "symbol": game.board[index],
+            "id": index,
         }
         button_dict_list.append(dict)
 
