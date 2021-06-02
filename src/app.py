@@ -12,6 +12,10 @@ game = OOXXGame() # 建立一個 game
 def index():
     global game
 
+    reset = request.form.get('reset')
+    if reset == 'reset':
+        game = OOXXGame()
+
     value = request.form.get('button')
     if value is not None:
         game.clickBoard(int(value))
