@@ -5,6 +5,8 @@ o = "Ｏ"
 
 class OOXXGame():
 
+    turn = 0
+    next = x
     board = []
 
     def __init__(self):
@@ -18,4 +20,11 @@ class OOXXGame():
         # print(self.board)
 
     def clickBoard(self, index):
-        self.board[index] = x
+        
+        if self.board[index] == space:
+            self.board[index] = self.next
+            self.turn += 1
+            if self.turn % 2 == 0:
+                self.next = x
+            else:
+                self.next = o
