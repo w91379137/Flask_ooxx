@@ -33,7 +33,7 @@ def index():
         }
         button_dict_list.append(dict)
 
-    return render_template('index.html', button_dict_list = button_dict_list)
+    return render_template('index.html', button_dict_list = button_dict_list, game = game)
 
 if __name__ == "__main__":
     app.run(debug=True)

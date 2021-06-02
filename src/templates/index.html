@@ -1,5 +1,7 @@
 
 <form method="POST">
+    回合：{{game.turn}}
+    輪到：{{game.next}}
     <button name="reset" value="reset">reset</button>
     {% for button_dict in button_dict_list %}
         <button style="position: absolute; left: {{button_dict.left}}; top:{{button_dict.top}}; width: 45px; height: 45px;" name="button" value={{button_dict.id}}> {{ button_dict.symbol }} </button>
