@@ -15,4 +15,7 @@ class OOXXGame():
         for i in range(9):
             new_board.append(space)
         self.board = new_board
-        print(self.board)
+        # print(self.board)
+
+    def clickBoard(self, index):
+        self.board[index] = x

@@ -13,7 +13,8 @@ def index():
     global game
 
     value = request.form.get('button')
-    print(value)
+    if value is not None:
+        game.clickBoard(int(value))
 
     button_dict_list = []
     count = len(game.board)
