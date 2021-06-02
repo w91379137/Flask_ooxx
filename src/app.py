@@ -11,7 +11,20 @@ game = OOXXGame() # 建立一個 game
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     global game
-    return render_template('index.html', board = game.board)
+
+    button_dict_list = []
+    count = len(game.board)
+    for index in range(count):
+        x = index % 3
+        y = (index - x) / 3
+        dict = {
+            "left": f"{ 50 * x + 100 }px",
+            "top": f"{ 50 * y + 100}px",
+            "symbol": game.board[index],
+        }
+        button_dict_list.append(dict)
+
+    return render_template('index.html', button_dict_list = button_dict_list)
 
 if __name__ == "__main__":
     app.run(debug=True)

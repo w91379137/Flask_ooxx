@@ -1,4 +1,4 @@
 
-{% for symbol in board %}
-    <h1> {{ symbol }}, </h1>
+{% for button_dict in button_dict_list %}
+    <button style="position: absolute; left: {{button_dict.left}}; top:{{button_dict.top}}; width: 45px; height: 45px;"> {{ button_dict.symbol }} </button>
 {% endfor %}
