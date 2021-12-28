@@ -1,4 +1,10 @@
 
+要安裝
+
+pip install flask
+
+
+
 如何啟動
 
 python src/app.py
